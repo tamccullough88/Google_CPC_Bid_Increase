@@ -40,14 +40,14 @@ if (!sheet) {
     
     // Retrieve relevant data
     var maxCpc = parseFloat(row['CpcBid']);
-    var clicks = parseFloat(row['Clicks']);
+    var clicks = row['Clicks'];
     var convRate = parseFloat(row['ConversionRate']);
     var costPerConv = parseFloat(row['CostPerConversion']);
     var ctr = parseFloat(row['Ctr']);
     var imprAbsTop = parseFloat(row['AbsoluteTopImpressionPercentage']);
-    var conversionValue = parseFloat(row['ConversionValue']);
-    var cost = parseFloat(row['Cost']);
-    var roas = (cost > 0) ? (conversionValue / cost) : 0; // Avoid division by zero
+    var conversionValue = row['ConversionValue'].replace(/,/g, '');
+    var cost = row['Cost'].replace(/,/g, '');
+    var roas = cost > 0 ? (conversionValue/cost) : 0; // Avoid division by zero
     
     // Initialize new bid with current maxCpc
     var newBid = maxCpc;
