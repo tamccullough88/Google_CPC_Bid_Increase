@@ -1,5 +1,5 @@
 function main() {
-  var SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1bDYd7kcIWJvIqwme4ZqACSGD8xOIwOFsOBM403pBu6U/edit?gid=0#gid=0'; // Replace with your Google Sheet URL
+  var SPREADSHEET_URL = 'Google_Sheet_URL'; // Replace with your Google Sheet URL
   var SHEET_NAME = 'From_GAD'; // Replace with the specific sheet name
   
   var spreadsheet = SpreadsheetApp.openByUrl(SPREADSHEET_URL);
